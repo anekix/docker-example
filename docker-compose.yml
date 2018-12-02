@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+ api-service:
+  build : ./app
+  volumes:
+   - ./app:/usr/src/app
+  ports:
+   - 5000:6000
+
+ frontend:
+  image: nginx
+  ports:
+   - 80:80
